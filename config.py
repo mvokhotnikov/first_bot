@@ -8,3 +8,4 @@ club3 = 'Клуб3'
 club3_description = 'Интересный клуб, где люди просто спят'
 d_list = []
 chat_id = {}
+
