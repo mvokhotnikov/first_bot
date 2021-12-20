@@ -42,7 +42,6 @@ def welcome(message):
                      hello + '{0.first_name} {0.last_name}\nВы желаете записаться на одну из наших секций?'.format(
                          message.from_user), parse_mode='html', reply_markup=markup)  #
     # Отправили в боте сообщение с приветсвием и закрепили клавиатура с "Да" и "Выйти"
-    return message
 
 
 @bot.message_handler(content_types=['text'])
@@ -154,4 +153,5 @@ def callback_inline(call):
 
 
 # RUN
-bot.polling(none_stop=True, skip_pending=True)
+if __name__ == '__main__':
+    bot.polling(none_stop=True, skip_pending=True)
