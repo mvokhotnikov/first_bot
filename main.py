@@ -10,12 +10,17 @@ bot = telebot.TeleBot(config.TOKEN)
 
 
 @bot.message_handler(commands=['start'])
-def welcome(message):  #
-    # Данная функция отвечает за команду /start.
-    # В ней мы отправляем приветсявие и добавляем клавиатуру с разрешенными сообщениями
-    print(message.from_user)  # В терминале выводим данные пользователя
-    config.chat_id[message.chat.id] = [
-        2]  # В словаре создаем список необходимых значений для определенного юзера и добавляем в него счетчик "Да"
+def welcome(message):
+    """
+
+    :param message:
+    Данный параметр является командой к началу работы бота(/start)
+    В этой функции мы отправляем приветсявие и добавляем клавиатуру с разрешенными сообщениями
+
+    """
+    """ В терминале выводим данные пользователя """
+    config.chat_id[message.chat.id] = [2]
+    """ В словаре создаем список необходимых значений для определенного юзера и добавляем в него счетчик "Да" """
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)  # Создаем клавиатуру с "Да" и "Выйти"
     item1 = types.KeyboardButton('Да')
     item2 = types.KeyboardButton('Выйти')
@@ -37,10 +42,16 @@ def welcome(message):  #
                      hello + '{0.first_name} {0.last_name}\nВы желаете записаться на одну из наших секций?'.format(
                          message.from_user), parse_mode='html', reply_markup=markup)  #
     # Отправили в боте сообщение с приветсвием и закрепили клавиатура с "Да" и "Выйти"
+    return message
 
 
 @bot.message_handler(content_types=['text'])
 def kkk(message):
+    """
+
+    :param message:
+    В зависимости от команды мы либо предоставляем список клубов, либо выходим
+    """
     if message.chat.type == 'private':
         if message.text == 'Выйти':  # Если сообщение 'Выйти', то прощаемся с пользователем, добавляем кнопку '/start'
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -75,8 +86,10 @@ def kkk(message):
 
 @bot.callback_query_handler(func=lambda call: True)
 def callback_inline(call):
-    # Данная функция отвечает за ловлю инлайновских сообщений.
-    # В ней мы предоставляем описание курсов или записываем на него
+    """
+    Данная функция отвечает за ловлю инлайновских сообщений.
+    В ней мы предоставляем описание курсов или записываем на него
+    """
     try:
         if call.message:
             if call.data == 'Клуб 1':

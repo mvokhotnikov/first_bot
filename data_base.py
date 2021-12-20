@@ -3,7 +3,7 @@ import pythoncom
 import config
 
 
-def free_dates(name_sheet):
+def free_dates(name_sheet):  # Смотрим, какие даты свободны
     pythoncom.CoInitialize()
     excel = win32com.client.Dispatch("Excel.Application")
     wb = excel.Workbooks.Open(config.way_to_list)
@@ -21,7 +21,7 @@ def free_dates(name_sheet):
     return date_list
 
 
-def register_date(name_sheet, date, user_last_name, user_first_name, d_list):
+def register_date(name_sheet, date, user_last_name, user_first_name, d_list):  # Записываем человека на дату
     pythoncom.CoInitialize()
     excel = win32com.client.Dispatch("Excel.Application")
     wb = excel.Workbooks.Open(config.way_to_list)
