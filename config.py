@@ -1,4 +1,5 @@
 TOKEN = '5022055945:AAHi8AeCngN78T-61e1ODuLlo3BnfOxtRhg'  # bot token from @BotFather
+way_to_list = 'C:\\Users\\User\\PycharmProjects\\Telegram_bot\\Exel_file\\List.xlsx'
 club1 = 'Клуб1'
 club1_description = 'Интересный клуб, где играют в тенис'
 club2 = 'Клуб2'

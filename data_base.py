@@ -6,7 +6,7 @@ import config
 def free_dates(name_sheet):
     pythoncom.CoInitialize()
     excel = win32com.client.Dispatch("Excel.Application")
-    wb = excel.Workbooks.Open('C:\\Users\\User\\PycharmProjects\\Telegram_bot\\Exel_file\\List.xlsx')
+    wb = excel.Workbooks.Open(config.way_to_list)
     sheet = wb.Worksheets(name_sheet)
     date_list = []
     i = 2
@@ -24,7 +24,7 @@ def free_dates(name_sheet):
 def register_date(name_sheet, date, user_last_name, user_first_name, d_list):
     pythoncom.CoInitialize()
     excel = win32com.client.Dispatch("Excel.Application")
-    wb = excel.Workbooks.Open('C:\\Users\\User\\PycharmProjects\\Telegram_bot\\Exel_file\\List.xlsx')
+    wb = excel.Workbooks.Open(config.way_to_list)
     sheet = wb.Worksheets(name_sheet)
     d = 0
     for d in d_list:
