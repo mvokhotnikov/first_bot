@@ -1,0 +1,9 @@
+TOKEN = '5071080673:AAEpCYhZ0fDc6pl-74BH9e0xSPx7PVputbs'  # bot token from @BotFather
+club1 = 'Клуб1'
+club1_description = '1 блабла'
+club2 = 'Клуб2'
+club2_description = '2 блабла'
+club3 = 'Клуб3'
+club3_description = '3 блабла'
+d_list = []
+chat_id = {}
