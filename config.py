@@ -1,9 +1,9 @@
-TOKEN = '5071080673:AAEpCYhZ0fDc6pl-74BH9e0xSPx7PVputbs'  # bot token from @BotFather
+TOKEN = '5022055945:AAHi8AeCngN78T-61e1ODuLlo3BnfOxtRhg'  # bot token from @BotFather
 club1 = 'Клуб1'
-club1_description = '1 блабла'
+club1_description = 'Интересный клуб, где играют в тенис'
 club2 = 'Клуб2'
-club2_description = '2 блабла'
+club2_description = 'Интересный клуб, где играют в го'
 club3 = 'Клуб3'
-club3_description = '3 блабла'
+club3_description = 'Интересный клуб, где люди просто спят'
 d_list = []
 chat_id = {}
